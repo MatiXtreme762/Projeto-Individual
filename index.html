@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
     <link rel="stylesheet" href="style.css">
-    <title>Previsao do tempo</title>
 </head>
 <body>
-    <script type="module" src="script.js"></script>
+    <div class="container">
+        <h1>Clima Agora</h1>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Digite o nome da cidade...">
+            <button id="search-btn">Buscar</button>
+        </div>
+        <div id="weather-result" class="hide">
+            <h2 id="city-name"></h2>
+            <img id="weather-icon" src="" alt="Ícone do tempo">
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <div class="details">
+                <p>Umidade: <span id="humidity"></span></p>
+                <p>Vento: <span id="wind"></span></p>
+            </div>
+        </div>
+        <div id="error-message" class="hide">
+            <p>Cidade não encontrada. Tente novamente.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
